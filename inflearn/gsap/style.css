@@ -1,0 +1,21 @@
+.stage {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.bg-red      { background-color: red; }
+.bg-orange   { background-color: orange; }
+.bg-yellow   { background-color: yellow; }
+.bg-green    { background-color: green; }
+.bg-blue     { background-color: blue; }
+.bg-darkblue { background-color: darkblue; }
+.bg-purple   { background-color: purple; }
+
+.bg-beige    { background-color: beige; }
+.bg-pink     { background-color: pink; }
+.bg-gray     { background-color: gray; }

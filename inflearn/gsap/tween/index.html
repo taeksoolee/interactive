@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gsap Tween</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="box bg-orange"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script>
+    gsap.to('.box', {
+      x: '50vw', // 0
+      y: '50vh', // 0
+      scale: 3, // 1
+      backgroundColor: 'red',
+      rotation: 360, // 0
+      // yoyo: true,
+      duration: 4, // 0.5
+      // repeat: -1, // -1 설정시 무한반복
+      // repeat: 1,
+      // ease: 'power1.out'
+      ease: 'bounce.out'
+    });
+  </script>
+</body>
+</html>

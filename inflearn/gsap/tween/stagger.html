@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gsap Tween</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="box bg-orange"></div>
+    <div class="box bg-pink"></div>
+    <div class="box bg-green"></div>
+    <div class="box bg-red"></div>
+    <div class="box bg-blue"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script>
+    // delay를 이용한 순차 지정
+    /**
+    gsap.to('.box.bg-orange', {
+      y: 200,
+      duration: 3,
+      delay: 0,
+    });
+    gsap.to('.box.bg-pink', {
+      y: 200,
+      duration: 3,
+      delay: 0.2,
+    });
+    gsap.to('.box.bg-green', {
+      y: 200,
+      duration: 3,
+      delay: 0.4,
+    });
+    gsap.to('.box.bg-red', {
+      y: 200,
+      duration: 3,
+      delay: 0.6,
+    });
+    gsap.to('.box.bg-blue', {
+      y: 200,
+      duration: 3,
+      delay: 0.8,
+    });
+    */
+
+    // stagger를 이용한 순차 지정
+    /** gsap.to('.box', {
+      y: 200,
+      duration: 3,
+      stagger: 0.2, // =each: 0.2
+    }); */
+
+    gsap.to('.box', {
+      y: 200,
+      duration: 3,
+      stagger: {
+        // each: 0.2, // 각 애니메이션 간격
+        amount: 1, // 전체 애니메이션이 소요되는 시간
+        from: 'edges', // 애니메이션 을 어디부터 시작할지를 결정 'start' | 'center' | 'end' | 'edges'
+      }
+    })
+  </script>
+</body>
+</html>

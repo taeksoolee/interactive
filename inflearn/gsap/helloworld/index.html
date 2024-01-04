@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gsap hellowrold</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+
+  <!-- 다른 라이브러리와 크기 비교 -->
+  <!-- 26.1kB -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+  <!-- 40.3kB -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script> -->
+
+  <!-- 30.4kB -->
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+
+  <script>
+    gsap.from('h1', {x: -500});
+    gsap.to('h1', {x: 0});
+    gsap.to('h1', {x: 200});
+    // gsap.to('h1', {y: 400});
+  </script>
+</body>
+</html>
